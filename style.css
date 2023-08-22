@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* *******************************les images************************ */
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #f2e9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img_box {
+  width: 100px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 50px;
+  background: url(img/img..jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: width 0.5s;
+}
+
+.img_box:nth-child(2) {
+  background: url(img/img15..jpg);
+  background-size: cover;
+  background-position: center;
+}
+.img_box:nth-child(3) {
+  background: url(img/img2..jpg);
+  background-size: cover;
+  background-position: center;
+}
+.img_box:nth-child(4) {
+  background: url(img/img3..jpg);
+  background-size: cover;
+  background-position: center;
+}
+.img_box:nth-child(5) {
+  background: url(img/img4..jpg);
+  background-size: cover;
+  background-position: center;
+}
+.img_box:nth-child(6) {
+  background: url(img/img5..jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img_box:hover {
+  width: 300px;
+}
+
+/* ********************responsive********************* */
+/* @media screen and (max-width: 950px) {
+  .img_box {
+    width: 300px;
+    height: 100px;
+  }
+} */
+
+/* ******************************informations************************** */
+
+.help_container {
+  max-width: 200px;
+  margin-inline: auto;
+  position: absolute;
+  top: 25px;
+  left: 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 450px;
+}
+
+.help_toggler1,
+.help_toggler2,
+.help_toggler3,
+.help_toggler4,
+.help_toggler5,
+.help_toggler6 {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #dadadab1;
+  background-color: transparent;
+  transition: background-color 0.5s ease-out;
+}
+.help_toggler1:hover,
+.help_toggler2:hover,
+.help_toggler3:hover,
+.help_toggler4:hover,
+.help_toggler5:hover,
+.help_toggler6:hover {
+  background-color: #333;
+}
+.help_toggler1 span,
+.help_toggler2 span,
+.help_toggler3 span,
+.help_toggler4 span,
+.help_toggler5 span,
+.help_toggler6 span {
+  letter-spacing: 1px;
+  color: #dedede;
+}
+.help_toggler1 img,
+.help_toggler2 img,
+.help_toggler3 img,
+.help_toggler4 img,
+.help_toggler5 img,
+.help_toggler6 img {
+  width: 20px;
+}
+
+.help_content1,
+.help_content2,
+.help_content3,
+.help_content4,
+.help_content5,
+.help_content6 {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 16px;
+  border: 2px solid #dadadab1;
+  color: #dedede;
+  transition: visibity 0.5s ease-out, opacity 0.5s ease-out;
+  visibility: hidden;
+  opacity: 0;
+  width: 250px;
+}
+
+.help_content1.active,
+.help_content2.active,
+.help_content3.active,
+.help_content4.active,
+.help_content5.active,
+.help_content6.active {
+  visibility: visible;
+  opacity: 1;
+}
+/* visibility: hidden et visibility: visible, me permettent de ne pas interagir avec le ou les elements cachés. alors que just opacity ne bloque pas linteraction avec lelement*/
+.help_content1 a,
+.help_content2 a,
+.help_content3 a,
+.help_content4 a,
+.help_content5 a,
+.help_content6 a {
+  color: #dedede;
+}
